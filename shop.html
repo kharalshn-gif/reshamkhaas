@@ -2,7 +2,8 @@
     .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
     .product-card { border: 2px solid #eee; padding: 15px; text-align: center; border-radius: 10px; background: white; }
     .product-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    .price { font-weight: bold; color: #232e50; margin: 10px 0; display: block; }
+    .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; margin-top: 10px; text-decoration: none; border-radius: 5px; }
 </style>
 
 <nav style="background: #232e50; padding: 15px; text-align: center; margin-bottom: 20px;">
@@ -11,15 +12,19 @@
     <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
     <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
 </nav>
+
 <div class="product-grid">
     <script>
-        // Yeh script 1 se 40 tak ke cards khud generate karegi
-        for (let i = 1; i <= 40; i++) {
+        // Har design ki mukhtalif price set karne ke liye array
+        const prices = ["2500", "2800", "3000", "2200", "3500", "2900", "2700", "3200", "2600"];
+
+        for (let i = 1; i <= 9; i++) {
             document.write(`
                 <div class="product-card">
-                    <img src="images/suit${i}.jpeg" class="product-image">
+                    <img src="suit${i}.jpeg" class="product-image">
                     <h3>Design ${i}</h3>
-                    <a href="https://wa.me/923370782529?text=Mujhe Design ${i} pasand aya hai." class="whatsapp-btn">Order on WhatsApp</a>
+                    <span class="price">Price: PKR ${prices[i-1]}</span>
+                    <a href="https://wa.me/923370782529?text=Mujhe Design ${i} pasand aya hai, iski price PKR ${prices[i-1]} hai. Kya ye available hai?" class="whatsapp-btn">Order on WhatsApp</a>
                 </div>
             `);
         }
