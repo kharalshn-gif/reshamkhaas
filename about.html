@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Premium Light Grey Brand Theme */
+    body {
+        background-color: #f4f4f6; /* Wahi light grey background color jo baki pages par hai */
+        color: #2c3e50;            /* Dark professional text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0; /* Margin 0 taake nav bar sahi se fit ho sky */
+    }
+    
+    /* Navigation Bar Fix for Purple Background */
+    nav {
+        background-color: #5c3b75; /* Aapki style.css ka purple color */
+        padding: 15px 20px;
+        margin-bottom: 40px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+        text-decoration: none;
+        color: #ffffff !important; /* Links ko pure white kiya taake purple par nazar aayin */
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: opacity 0.2s;
+    }
+    nav a:hover {
+        opacity: 0.8;
+    }
+
+    /* Main About Container Card */
+    .about-card {
+        max-width: 850px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 50px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        text-align: center;
+    }
+
+    .about-card h1 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-top: 0;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .brand-tagline {
+        font-size: 16px;
+        color: #5a626a; 
+        font-style: italic;
+        margin-bottom: 35px;
+        font-weight: 500;
+    }
+
+    .about-description {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #4a5568;
+        text-align: justify;
+        margin-bottom: 40px;
+    }
+
+    /* Features Badges Section */
+    .features-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .feature-item {
+        flex: 1;
+        min-width: 220px;
+        background: #fdfbf9;
+        padding: 25px 20px;
+        border-radius: 8px;
+        border: 1px solid #f3ece6;
+    }
+
+    .feature-item h3 {
+        margin-top: 0;
+        color: #2c3e50;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+        color: #718096;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- About Us Main Content Card -->
+<div class="about-card">
+    <h1>About Us</h1>
+    <p class="brand-tagline">Crafting Elegance & Premium Quality Clothing</p>
+    
+    <div class="about-description">
+        <p>
+            Welcome to our online store, your ultimate destination for premium quality clothing in Pakistan. We specialize in bringing you an exquisite collection of fabrics, featuring finely woven Lawn, detailed Embroidered articles, and beautifully designed 2-Piece and 3-Piece suits tailored to fit your everyday and formal wardrobe needs.
+        </p>
+        <p>
+            Our core mission is to bridge the gap between high-end luxury aesthetics and affordability. We carefully pick every design, ensuring vibrant prints, durable fabric textures, and top-tier quality standards. We believe that style should be seamless and accessible, which is why we offer a direct-to-WhatsApp ordering system to give you a personalized and hassle-free shopping experience. Thank you for making us a part of your style journey!
+        </p>
+    </div>
+
+    <!-- Separator Line -->
+    <hr style="border: 0; height: 1px; background: #ebdcd0; margin: 30px 0;">
+
+    <!-- Key Core Strengths -->
+    <div class="features-grid">
+        <div class="feature-item">
+            <h3>Premium Fabrics</h3>
+            <p>We choose only the finest threads and softest lawn to ensure absolute comfort and long-lasting quality.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Timeless Designs</h3>
+            <p>From traditional aesthetic embroidery to modern prints, our pieces are designed to stand out.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Instant Ordering</h3>
+            <p>No complex checkouts! Simply find what you love on our Shop page and place your order directly via WhatsApp.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

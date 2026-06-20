@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Premium Brand Colors & Design */
+    body {
+        background-color: #f4f4f6; /* Wahi light grey background color jo home par hai */
+        color: #2c3e50;            /* Dark professional text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0; /* Margin 0 taake nav bar sahi se fit ho sky */
+    }
+    
+    /* Navigation Bar Fix for Purple Background */
+    nav {
+        background-color: #5c3b75; /* Aapki style.css ka purple color */
+        padding: 15px 20px;
+        margin-bottom: 40px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+        text-decoration: none;
+        color: #ffffff !important; /* Links ko pure white kiya taake purple par nazar aayin */
+        margin: 0 15px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: opacity 0.2s;
+    }
+    nav a:hover {
+        opacity: 0.8;
+    }
+
+    /* Main Contact Card Layout */
+    .contact-card {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 45px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        text-align: center;
+    }
+
+    .contact-card h1 {
+        font-size: 34px;
+        color: #2c3e50;
+        margin-top: 0;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-tagline {
+        font-size: 15px;
+        color: #7f8c8d;
+        font-style: italic;
+        margin-bottom: 35px;
+    }
+
+    /* Info Items Styling */
+    .info-section {
+        margin: 25px 0;
+        padding: 15px;
+        background: #fdfbf9;
+        border-radius: 8px;
+        border: 1px solid #f3ece6;
+    }
+
+    .info-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #718096;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .info-detail {
+        font-size: 18px;
+        color: #2c3e50;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    /* Big Direct WhatsApp Button */
+    .whatsapp-btn {
+        display: inline-block;
+        background-color: #2c3e50;
+        color: white;
+        text-decoration: none;
+        padding: 14px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 20px;
+        width: calc(100% - 60px);
+        transition: background-color 0.2s, transform 0.2s;
+        box-shadow: 0 4px 10px rgba(44, 62, 80, 0.15);
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #1a252f;
+        transform: translateY(-2px);
+    }
+
+    .note-text {
+        font-size: 13px;
+        color: #a0aec0;
+        margin-top: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Contact Us Card -->
+<div class="contact-card">
+    <h1>Contact Us</h1>
+    <p class="contact-tagline">We'd Love to Hear From You!</p>
+
+    <!-- Email Section -->
+    <div class="info-section">
+        <p class="info-title">Email Address</p>
+        <p class="info-detail">mazharkharal2233@gmail.com</p>
+    </div>
+
+    <!-- Support Timings Section -->
+    <div class="info-section">
+        <p class="info-title">Support Hours</p>
+        <p class="info-detail">Mon - Sat: 11:00 AM - 9:00 PM</p>
+    </div>
+
+    <!-- Quick Help Text -->
+    <p style="font-size: 15px; color: #4a5568; margin-top: 30px; line-height: 1.6;">
+        Have questions about fabric quality, order status, or custom delivery? Connect with us instantly on WhatsApp for quick assistance.
+    </p>
+
+    <!-- Direct Contact Button -->
+    <a href="https://wa.me/923370782529?text=Hi,%20I%20have%20a%20query%20regarding%20my%20order." target="_blank" class="whatsapp-btn">
+        Chat On WhatsApp
+    </a>
+    
+    <p class="note-text">We typically respond within a few hours.</p>
+</div>
+
+</body>
+</html>
