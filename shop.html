@@ -1,33 +1,56 @@
 <style>
+    .nav { background: #232e50; padding: 15px; text-align: center; }
+    .nav a { color: white; margin: 0 15px; text-decoration: none; }
+    .filter-btns { text-align: center; margin: 20px 0; }
+    .filter-btns button { padding: 10px 20px; cursor: pointer; border: none; background: #232e50; color: white; border-radius: 5px; }
     .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-    .product-card { border: 2px solid #eee; padding: 15px; text-align: center; border-radius: 10px; background: white; }
+    .product-card { border: 2px solid #eee; padding: 15px; text-align: center; border-radius: 10px; background: white; display: none; }
     .product-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    .price { font-weight: bold; color: #232e50; margin: 10px 0; display: block; }
-    .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; margin-top: 10px; text-decoration: none; border-radius: 5px; }
+    .price { font-weight: bold; color: #232e50; display: block; margin: 10px 0; }
+    .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; text-decoration: none; border-radius: 5px; }
 </style>
 
-<nav style="background: #232e50; padding: 15px; text-align: center; margin-bottom: 20px;">
-    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-    <a href="shop.html" style="color: white; margin: 0 15px; text-decoration: none;">Shop</a>
-    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
-    <a href="contact.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
-</nav>
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
 
-<div class="product-grid">
+<div class="filter-btns">
+    <button onclick="filterSelection('all')">Show All</button>
+    <button onclick="filterSelection('casual')">Casual Wear</button>
+    <button onclick="filterSelection('party')">Party Wear</button>
+</div>
+
+<div class="product-grid" id="productGrid">
     <script>
-        // Yahan 17 suits ki prices hain, aap inhe change kar sakti hain
-        const prices = ["2500", "2800", "3000", "2200", "3500", "2900", "2700", "3200", "2600", "3100", "2400", "3300", "2850", "2750", "3600", "2950", "3050"];
+        // Prices array: Suit 1 se 27 tak (Total 27 prices)
+        const prices = [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 4000, 4200, 4500, 4800, 5000, 5200, 5500, 5800, 6000, 6500];
 
-        // Loop ab 1 se 17 tak chalega
-        for (let i = 1; i <= 17; i++) {
+        for (let i = 1; i <= 27; i++) {
+            let category = (i <= 17) ? 'casual' : 'party';
             document.write(`
-                <div class="product-card">
+                <div class="product-card ${category}">
                     <img src="suit${i}.jpeg" class="product-image">
-                    <h3>Design ${i}</h3>
-                    <span class="price">Price: PKR ${prices[i-1]}</span>
-                    <a href="https://wa.me/923370782529?text=Mujhe Design ${i} pasand aya hai, iski price PKR ${prices[i-1]} hai. Kya ye available hai?" class="whatsapp-btn">Order on WhatsApp</a>
+                    <h3>Suit ${i}</h3>
+                    <span class="price">PKR ${prices[i-1]}</span>
+                    <a href="https://wa.me/923370782529?text=Mujhe Suit ${i} chahiye, iski price PKR ${prices[i-1]} hai." class="whatsapp-btn">Order on WhatsApp</a>
                 </div>
             `);
         }
+
+        function filterSelection(c) {
+            let cards = document.getElementsByClassName("product-card");
+            for (let i = 0; i < cards.length; i++) {
+                if (c == "all") cards[i].style.display = "block";
+                else {
+                    if (cards[i].classList.contains(c)) cards[i].style.display = "block";
+                    else cards[i].style.display = "none";
+                }
+            }
+        }
+        // Default view: show all
+        filterSelection('all');
     </script>
 </div>
