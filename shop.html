@@ -1,14 +1,23 @@
-<style>
-    .nav { background: #232e50; padding: 15px; text-align: center; }
-    .nav a { color: white; margin: 0 15px; text-decoration: none; }
-    .filter-btns { text-align: center; margin: 20px 0; }
-    .filter-btns button { padding: 10px 20px; cursor: pointer; border: none; background: #232e50; color: white; border-radius: 5px; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-    .product-card { border: 2px solid #eee; padding: 15px; text-align: center; border-radius: 10px; background: white; display: none; }
-    .product-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-    .price { font-weight: bold; color: #232e50; display: block; margin: 10px 0; }
-    .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; text-decoration: none; border-radius: 5px; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reshamkhaas Shop</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .nav { background: #232e50; padding: 15px; text-align: center; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        .filter-btns { text-align: center; margin: 20px 0; }
+        .filter-btns button { padding: 10px 20px; cursor: pointer; border: none; background: #232e50; color: white; border-radius: 5px; margin: 5px; transition: 0.3s; }
+        .filter-btns button:hover { background: #3b4a7a; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 10px; background: white; }
+        .product-image { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        .price { font-weight: bold; color: #d32f2f; display: block; margin: 10px 0; }
+        .whatsapp-btn { display: block; background-color: #25D366; color: white; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
 
 <div class="nav">
     <a href="index.html">Home</a>
@@ -23,34 +32,40 @@
     <button onclick="filterSelection('party')">Party Wear</button>
 </div>
 
-<div class="product-grid" id="productGrid">
-    <script>
-        // Prices array: Suit 1 se 27 tak (Total 27 prices)
-        const prices = [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 4000, 4200, 4500, 4800, 5000, 5200, 5500, 5800, 6000, 6500];
+<div class="product-grid" id="productGrid"></div>
 
-        for (let i = 1; i <= 27; i++) {
-            let category = (i <= 17) ? 'casual' : 'party';
-            document.write(`
-                <div class="product-card ${category}">
-                    <img src="suit${i}.jpeg" class="product-image">
-                    <h3>Suit ${i}</h3>
-                    <span class="price">PKR ${prices[i-1]}</span>
-                    <a href="https://wa.me/923370782529?text=Mujhe Suit ${i} chahiye, iski price PKR ${prices[i-1]} hai." class="whatsapp-btn">Order on WhatsApp</a>
+<script>
+    let allProducts = [];
+
+    // JSON file se data mangwana
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            allProducts = data;
+            renderProducts(allProducts);
+        });
+
+    function renderProducts(items) {
+        const grid = document.getElementById('productGrid');
+        grid.innerHTML = "";
+        items.forEach(item => {
+            grid.innerHTML += `
+                <div class="product-card">
+                    <img src="suit${item.id}.jpeg" class="product-image">
+                    <h3>${item.name}</h3>
+                    <span class="price">Price: PKR ${item.price}</span>
+                    <a href="https://wa.me/923370782529?text=Mujhe ${item.name} chahiye, iski price PKR ${item.price} hai." class="whatsapp-btn">Order on WhatsApp</a>
                 </div>
-            `);
-        }
+            `;
+        });
+    }
 
-        function filterSelection(c) {
-            let cards = document.getElementsByClassName("product-card");
-            for (let i = 0; i < cards.length; i++) {
-                if (c == "all") cards[i].style.display = "block";
-                else {
-                    if (cards[i].classList.contains(c)) cards[i].style.display = "block";
-                    else cards[i].style.display = "none";
-                }
-            }
-        }
-        // Default view: show all
-        filterSelection('all');
-    </script>
-</div>
+    function filterSelection(c) {
+        if (c == 'all') return renderProducts(allProducts);
+        const filtered = allProducts.filter(item => item.category == c);
+        renderProducts(filtered);
+    }
+</script>
+
+</body>
+</html>
