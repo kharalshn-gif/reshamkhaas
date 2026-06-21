@@ -31,5 +31,10 @@
   {"id": 30, "name": "Suit 30", "price": 4700, "category": "casual"}, 
   {"id": 31, "name": "Suit 31", "price": 3800, "category": "casual"},
   {"id": 32, "name": "Suit 32", "price": 4200, "category": "casual"}, 
-  {"id": 33, "name": "Suit 33", "price": 4000, "category": "casual"}
-]                   
+  {"id": 33, "name": "Suit 33", "price": 4000, "category": "casual"},
+  {"id": 34, "name": "Suit 34", "price": 3000, "category": "casual"},
+  {"id": 35, "name": "Suit 35", "price": 3000, "category": "casual"},    
+  {"id": 36, "name": "Suit 36", "price": 3000, "category": "casual"},
+  {"id": 37, "name": "Suit 37", "price": 3000, "category": "casual"}, 
+  {"id": 38, "name": "Suit 38", "price": 3000, "category": "casual"}
+ ]          
