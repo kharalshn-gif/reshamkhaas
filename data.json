@@ -29,7 +29,7 @@
   {"id": 28, "name": "Suit 28", "price": 4500, "category": "party"},
   {"id": 29, "name": "Suit 29", "price": 5000, "category": "casual"},        
   {"id": 30, "name": "Suit 30", "price": 4700, "category": "casual"}, 
-  {"id": 31, "name": "Suit 31", "price": ,3800 "category": "casual"},
+  {"id": 31, "name": "Suit 31", "price": 3800, "category": "casual"},
   {"id": 32, "name": "Suit 32", "price": 4200, "category": "casual"}, 
   {"id": 33, "name": "Suit 33", "price": 4000, "category": "casual"}
 ]                   
