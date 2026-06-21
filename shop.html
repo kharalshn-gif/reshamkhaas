@@ -59,12 +59,19 @@
             `;
         });
     }
-
     function filterSelection(c) {
-        if (c == 'all') return renderProducts(allProducts);
+    if (c == 'all') {
+        renderProducts(allProducts);
+    } else {
+        // Yahan filter ho raha hai
         const filtered = allProducts.filter(item => item.category == c);
+        // Ab yahan filter hone ke baad products display ho rahe hain
         renderProducts(filtered);
     }
+}
+
+    
+    
 </script>
 
 </body>
