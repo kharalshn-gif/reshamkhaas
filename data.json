@@ -25,6 +25,6 @@
   {"id": 24, "name": "Suit 24", "price": 5500, "category": "party"},
   {"id": 25, "name": "Suit 25", "price": 5800, "category": "party"},
   {"id": 26, "name": "Suit 26", "price": 6000, "category": "party"},
-  {"id": 27, "name": "Suit 27", "price": 6500, "category": "party"}
+  {"id": 27, "name": "Suit 27", "price": 6500, "category": "party"},
   {"id": 28, "name": "Suit 28", "price": 4500, "category": "party"}
 ]
