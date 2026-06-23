@@ -47,5 +47,28 @@
   {"id": 46, "name": "Suit 46", "price": 2500, "category": "party"},
   {"id": 47, "name": "Suit 47", "price": 3850, "category": "party"},
   {"id": 48, "name": "Suit 48", "price": 3500, "category": "party"},
-  {"id": 49, "name": "Suit 49", "price": 3500, "category": "casual"}
+  {"id": 49, "name": "Suit 49", "price": 3500, "category": "casual"},
+  {"id": 50, "name": "Suit 50", "price": 4500, "category": "casual"},
+  {"id": 51, "name": "Suit 51", "price": 4500, "category": "casual"},
+  {"id": 52, "name": "Suit 52", "price": 4500, "category": "casual"},
+  {"id": 53, "name": "Suit 53", "price": 5000, "category": "casual"},
+  {"id": 54, "name": "Suit 54", "price": 5000, "category": "casual"},
+  {"id": 55, "name": "Suit 55", "price": 4700, "category": "casual"},
+  {"id": 56, "name": "Suit 56", "price": 4700, "category": "casual"},
+  {"id": 57, "name": "Suit 57", "price": 4700, "category": "casual"},
+  {"id": 58, "name": "Suit 58", "price": 4700, "category": "casual"},
+  {"id": 59, "name": "Suit 59", "price": 5200, "category": "casual"},
+  {"id": 60, "name": "Suit 60", "price": 4700, "category": "casual"},
+  {"id": 61, "name": "Suit 61", "price": 5000, "category": "casual"},
+  {"id": 62, "name": "Suit 62", "price": 5000, "category": "casual"},
+  {"id": 63, "name": "Suit 63", "price": 5000, "category": "casual"},
+  {"id": 64, "name": "Suit 64", "price": 5000, "category": "casual"},
+  {"id": 65, "name": "Suit 65", "price": 4700, "category": "casual"},
+  {"id": 66, "name": "Suit 66", "price": 4700, "category": "casual"},
+  {"id": 67, "name": "Suit 67", "price": 4900, "category": "casual"},
+  {"id": 68, "name": "Suit 68", "price": 4900, "category": "casual"},
+  {"id": 69, "name": "Suit 69", "price": 4900, "category": "casual"}
  ]
+  
+
+
