@@ -67,8 +67,25 @@
   {"id": 66, "name": "Suit 66", "price": 4700, "category": "casual"},
   {"id": 67, "name": "Suit 67", "price": 4900, "category": "casual"},
   {"id": 68, "name": "Suit 68", "price": 4900, "category": "casual"},
-  {"id": 69, "name": "Suit 69", "price": 4900, "category": "casual"}
- ]
+  {"id": 69, "name": "Suit 69", "price": 4900, "category": "casual"},
+  {"id": 70, "name": "Suit 70", "price": 3200, "category": "casual"},
+  {"id": 71, "name": "Suit 71", "price": 3200, "category": "casual"},
+  {"id": 72, "name": "Suit 72", "price": 3200, "category": "casual"},
+  {"id": 73, "name": "Suit 73", "price": 3200, "category": "casual"},
+  {"id": 74, "name": "Suit 74", "price": 4700, "category": "party"},
+  {"id": 75, "name": "Suit 75", "price": 3900, "category": "casual"},
+  {"id": 76, "name": "Suit 76", "price": 3900, "category": "casual"},
+  {"id": 77, "name": "Suit 77", "price": 3200, "category": "casual"},
+  {"id": 78, "name": "Suit 78", "price": 3200, "category": "casual"}
+]
+
+
+
+
+
+
+
+
   
 
 
